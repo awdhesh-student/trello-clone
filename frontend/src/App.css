@@ -1,0 +1,182 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  outline: none;
+
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .6s;
+  transition-duration: .6s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+.content {
+  flex: 1;
+}
+
+/*********************************************************************/
+
+.task-board {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.task-column {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-column h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task-card {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.task-card h4 {
+  margin: 0 0 10px;
+}
+
+.task-card p {
+  margin: 5px 0;
+}
+
+.task-card button {
+  color: rgb(54, 117, 243);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.task-card button:hover {
+  background-color: none;
+}
+
+.opacity-dim {
+  opacity: 0.7;
+  border-color: green;
+}
+
+.add-btn {
+  background-color: #007bff;
+}
+
+@media (max-width: 576px) {
+  .task-board {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .task-column {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .task-board {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .task-column {
+    margin-bottom: 20px;
+  }
+
+  .task-card {
+    padding: 8px;
+  }
+
+  .task-card button {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .task-board {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .task-card {
+    padding: 9px;
+  }
+
+  .task-card button {
+    padding: 4px 9px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .task-board {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .task-card {
+    padding: 9px;
+  }
+
+  .task-card button {
+    padding: 5px 9px;
+  }
+}
